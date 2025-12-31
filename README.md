@@ -16,16 +16,16 @@ ng serve
 Frontend runs on: http://localhost:4200
 
 Features:
-User registration and login
-Product creation and management (MongoDB)
-Orders created by users using selected products
-Public API integration
+User registration and login, 
+Product creation and management (MongoDB), 
+Orders created by users using selected products, 
+Public API integration, 
 JWT-based authentication
 
 Tech Stack:
-Angular
-Node.js
-Express
+Angular, 
+Node.js, 
+Express, 
 MongoDB
 
 Author:
