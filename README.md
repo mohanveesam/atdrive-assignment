@@ -26,7 +26,8 @@ Tech Stack:
 Angular, 
 Node.js, 
 Express, 
-MongoDB
+MongoDB,
+MySQL
 
 Author:
 Mohan Veesam
