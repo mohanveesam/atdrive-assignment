@@ -1,0 +1,179 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.sidenav-container {
+  height: 100vh;
+}
+
+.custom-sidenav {
+  background-color: #f8f9fa;
+  padding: 10px;
+  width: 221px !important;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidenav-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Active link styling */
+/* .active-link {
+  background-color: #0d6efd;
+  color: rgb(255, 255, 255) !important;
+  border-radius: 6px;
+} */
+
+/* Main content styling */
+.main-content {
+  padding: 20px;
+  background-color: #ffffff;
+  height: 100%;
+  overflow: auto;
+}
+
+.mat-mdc-list-item:hover {
+  background-color: rgba(var(--mdc-theme-primary-rgb, 25, 118, 210), 0.1);
+  color: var(--mdc-theme-primary, #0b5ed7);
+    border-radius: 8px !important;
+}
+/* Active route styling */
+.active-link {
+  background-color: #0b5ed7 !important; /* theme primary */
+  color: white !important;
+  font-weight: 600;
+  border-radius: 8px;
+}
+a.mat-mdc-list-item.active-link {
+  background-color: #0b5ed7 !important; /* primary */
+  border-radius: 8px;
+}
+
+/* Fix the actual label text */
+a.mat-mdc-list-item.active-link .mdc-list-item__primary-text {
+  color: #ffffff !important;
+}
+
+/* Ensure mat-icons or svgs also turn white */
+a.mat-mdc-list-item.active-link mat-icon,
+a.mat-mdc-list-item.active-link .mat-icon,
+a.mat-mdc-list-item.active-link svg {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+.table-container {
+  height: 76vh !important;              /* Fix height */
+  overflow-y: auto !important;          /* Enable vertical scroll */
+  overflow-x: hidden !important;        /* Prevent sideways scroll */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mat-mdc-header-row {
+  position: sticky;
+  top: 0;
+  z-index: 1;                /* Keep header on top of rows */
+  background: #fff;          /* Match card background */
+}
+
+.task-card {
+  height: 50vh;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  position: sticky;
+  top: 0;
+  background: rgba(220, 53, 69, 0.5); /* match card bg (danger with opacity) */
+  margin: 0;
+  padding: 8px;
+  z-index: 1;
+}
+
+.task-list {
+  flex: 1;    
+  overflow-y: auto;      
+}
+.mat-primary .mat-mdc-header-cell {
+  color: white;
+  font-weight: 600;
+  background-color: #0b5ed7 !important;
+}
+.left-list {
+  height: 84vh !important;              /* Fix height */
+  overflow-y: auto !important;          /* Enable vertical scroll */
+  overflow-x: hidden !important;        /* Prevent sideways scroll */
+}
+
+/* for formfields */
+.small-field .mat-mdc-form-field-flex {
+  height: 36px;              /* smaller height */
+  /* padding: 0 8px;            side padding  */
+  align-items: center;       /* vertically center the input */
+}
+
+.small-field input.mat-mdc-input-element {
+  padding: 2px 0;            /* reduce inner padding */
+  font-size: 14px;
+  line-height: 20px;         /* keeps cursor centered */
+}
+
+.small-field .mat-mdc-form-field-infix {
+  min-height: 30px;          /* ensure enough room for text cursor */
+}
+
+.mat-drawer-inner-container {
+  width: 100%;
+  height: 100%;
+}
+
+.mat-header-row {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #1976d2;
+  color: white;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+}
+
+.profile-picture img {
+  object-fit: cover;
+  border: 2px solid #1976d2;
+}
+
+.profile-picture button {
+  padding: 3px 6px;
+}
+.avatar {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.edit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* background: #1976d2; */
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

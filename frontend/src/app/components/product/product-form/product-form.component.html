@@ -1,0 +1,33 @@
+<div class="p-3">
+  <div class="d-flex align-items-center justify-content-between">
+    <h5 mat-dialog-title>{{ mode === 'E' ? 'Edit Product' : 'Add Product' }}</h5>
+    <div (click)="onCancel()" style="cursor: pointer;" matTooltip="Close">
+      <mat-icon>cancel</mat-icon>
+    </div>
+  </div>
+
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline" floatLabel="always" class="small-field w-100 pt-2">
+      <mat-label>Product Name</mat-label>
+      <input matInput formControlName="name" type="text" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" floatLabel="always" class="small-field w-100 pt-2">
+      <mat-label>Product price</mat-label>
+      <input matInput formControlName="price" type="text" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" floatLabel="always" class="small-field w-100 pt-2">
+      <mat-label>Product Description</mat-label>
+      <input matInput formControlName="description" type="text" />
+    </mat-form-field>
+
+    <div>
+    <button type="button" class="me-2 pb-2 btn btn-light" matTooltip="Cancel" (click)="onCancel()"><mat-icon class="pt-2">close</mat-icon>Cancel</button>
+    <button class="btn btn-primary" type="submit" matTooltip="{{ mode === 'E' ? 'Update' : 'Submit' }}"><mat-icon class="pt-1">done_all</mat-icon>
+        {{ mode === 'E' ? 'Update' : 'Submit' }}
+    </button>
+    </div>
+  </form>
+
+</div>

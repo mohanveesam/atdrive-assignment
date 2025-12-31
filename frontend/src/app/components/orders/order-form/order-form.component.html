@@ -1,0 +1,42 @@
+<div class="p-3">
+  <div class="d-flex align-items-center justify-content-between">
+    <h5 mat-dialog-title>{{ mode === 'E' ? 'Edit Order' : 'Add Order' }}</h5>
+    <div (click)="onCancel()" style="cursor: pointer;" matTooltip="Close">
+      <mat-icon>cancel</mat-icon>
+    </div>
+  </div>
+
+  <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+    <div *ngIf="mode === 'E'" class="mb-3">
+
+      <h6>Assigned Products</h6>
+
+      <ul *ngIf="assignedProducts.length > 0; else noProducts">
+        <li *ngFor="let product of assignedProducts">
+          {{ product.name }} - ₹{{ product.price }}
+        </li>
+      </ul>
+
+      <ng-template #noProducts>
+        <p class="text-muted">No products assigned</p>
+      </ng-template>
+
+    </div>
+  <mat-form-field appearance="outline" floatLabel="always" class="small-field w-100 pt-2">
+    <mat-label>Select Products</mat-label>
+    <mat-select formControlName="productIds" multiple>
+      <mat-option *ngFor="let Product of products" [value]="Product._id.toString()">
+        {{ Product.name }} - ₹{{ Product.price }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+    <div>
+    <button type="button" class="me-2 pb-2 btn btn-light" matTooltip="Cancel" (click)="onCancel()"><mat-icon class="pt-2">close</mat-icon>Cancel</button>
+    <button class="btn btn-primary" type="submit" matTooltip="{{ mode === 'E' ? 'Update' : 'Submit' }}"><mat-icon class="pt-1">done_all</mat-icon>
+        {{ mode === 'E' ? 'Update' : 'Submit' }}
+    </button>
+    </div>
+  </form>
+
+</div>
