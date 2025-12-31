@@ -4,15 +4,15 @@ This is a simple full-stack application built using Angular (frontend) and Node.
 I have added only node_modules to .gitignore. All other files, including the .env file, are pushed to the repository. You can install the required packages using npm install and run both the frontend and backend applications.
 
 Backend:
-cd backend
-npm install
-node server.js
+cd backend, 
+npm install, 
+node server.js, 
 Backend runs on: http://localhost:3000
 
 Frontend:
-cd frontend
-npm install
-ng serve
+cd frontend, 
+npm install, 
+ng serve, 
 Frontend runs on: http://localhost:4200
 
 Features:
