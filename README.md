@@ -12,7 +12,7 @@ Backend runs on: http://localhost:3000
 Frontend:
 cd frontend, 
 npm install, 
-ng serve, 
+npm run start, 
 Frontend runs on: http://localhost:4200
 
 Features:
